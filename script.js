@@ -11,6 +11,12 @@ let thumbnailImg = null
 
 menuIcon.addEventListener('click', ()=>{
     leftMenu.classList.toggle('smallLeftMenu')
+    black.classList.toggle('show')
+})
+black.addEventListener('click',(e) =>{
+    e.stopPropagation()
+    leftMenu.classList.remove('smallLeftMenu')
+    black.classList.remove('show')
 })
 
 async function fetchVideos(searchTerm, maxResult) {

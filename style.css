@@ -86,6 +86,7 @@ nav {
 .smallLeftMenu div h4 {
     font-size: 0.6rem;
     font-weight: 400px;
+    text-align: center;
 }
 .home {
     background-color: rgba(128, 128, 128, 0.342);
@@ -100,6 +101,7 @@ nav {
     overflow: hidden;
 }
 .inputDiv>input {
+    width: 6rem;
     flex: 1;
     background-color: rgb(15,15,15);
     color: white;
@@ -165,16 +167,32 @@ nav span {
 .channel-logo {
     width: 2.3rem;
     height: 2.3rem;
-    border-radius: 50%;
+    border-radius: 50%; 
 }
-
+.black {
+    display: none;
+}
 @media screen and (max-width: 768px) {
+    .show {
+        display: block !important;
+    }
     .leftMenu {
         display: none;
     }
     .smallLeftMenu {
+        position: fixed;
+        background-color: rgb(15,15,15);
+        top: 3rem;
         display: flex;
         width: 13rem;
+    }
+    .black {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
     }
     .smallLeftMenu div {
         flex-direction: row;
